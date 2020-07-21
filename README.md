@@ -8,7 +8,7 @@
 |:------------------------:|:----------:|:-------------:|:------------------------------------------:|
 | `minimum_distance` | float | 10 | Minimum distance for damage falloff to activate. |
 | `distance_divider` | float | 10 | Denominator when calculating the exponent to RangeMod. |
-#The following three apply to the RangeMod portion of the formula below
+The following three apply to the RangeMod portion of the formula below
 | `no_scope` | float | 0.85 | Multiplier when the shooter has no scope attached. |
 | `small_scope` | float | 0.90 | Multiplier when the shooter has a red/blue dot or holo sight. |
 | `large_scope` | float | 0.95 | Multiplier when the shooter has a night vision or sniper sight. |
