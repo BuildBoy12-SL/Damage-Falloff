@@ -2,17 +2,19 @@
 
 namespace DamageFalloff
 {
-    internal class DistanceLogic
+    public class DistanceLogic
     {
-        public static float DoMath(float damage, float distance, ReferenceHub shooter)
+        private readonly DamageFalloff plugin;
+        public DistanceLogic(DamageFalloff plugin) => this.plugin = plugin;
+
+        public float DoMath(float damage, float distance, ReferenceHub shooter)
         {           
-            if (distance > DamageFalloff.ConfigRef.Config.MinimumDistance)
+            if (distance > plugin.Config.MinimumDistance)
             {
-                float RangeMod;
-                if (shooter.HasSmallScope()) RangeMod = float.Parse(DamageFalloff.ConfigRef.Config.SmallScope);
-                else if (shooter.HasSniperScope()) RangeMod = float.Parse(DamageFalloff.ConfigRef.Config.LargeScope);
-                else RangeMod = float.Parse(DamageFalloff.ConfigRef.Config.NoScope);
-                return damage * (float)Math.Pow(RangeMod, distance / DamageFalloff.ConfigRef.Config.DistanceDivider);
+                float RangeMod = float.Parse(plugin.Config.NoScope);
+                if (shooter.HasSmallScope()) RangeMod = float.Parse(plugin.Config.SmallScope);
+                else if (shooter.HasSniperScope()) RangeMod = float.Parse(plugin.Config.LargeScope);
+                return damage * (float)Math.Pow(RangeMod, distance / plugin.Config.DistanceDivider);
             }
             return damage;
         }       

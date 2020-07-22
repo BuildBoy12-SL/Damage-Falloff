@@ -1,13 +1,15 @@
-using Exiled.API.Features;
 using Exiled.Events.EventArgs;
 
 namespace DamageFalloff
 {
-	public class EventHandlers
+    public class EventHandlers
 	{
+		private readonly DamageFalloff plugin;
+		public EventHandlers(DamageFalloff plugin) => this.plugin = plugin;
+
 		public void OnLateShoot(ShotEventArgs ev)
 		{
-			ev.Damage = DistanceLogic.DoMath(ev.Damage, ev.Distance, ev.Shooter.ReferenceHub);
+			ev.Damage = plugin.DistanceLogic.DoMath(ev.Damage, ev.Distance, ev.Shooter.ReferenceHub);
 		}
 	}
 }

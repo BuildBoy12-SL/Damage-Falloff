@@ -6,10 +6,10 @@ namespace DamageFalloff
     public class Config : IConfig
     {
         [Description("Minimum distance for falloff to activate.")]
-        public int MinimumDistance { get; set; } = 10;
+        public float MinimumDistance { get; set; } = 10;
 
         [Description("Denominator when calculating the exponent to RangeMod.")]
-        public int DistanceDivider { get; set; } = 10;
+        public float DistanceDivider { get; set; } = 10;
 
         /// <summary>
         /// Don't patronize me for using strings for these three, the config writer made it look ugly so this makes it look pretty.
@@ -23,7 +23,7 @@ namespace DamageFalloff
         [Description("Multiplier when the shooter has a night vision or sniper sight.")]
         public string LargeScope { get; set; } = "0.95";
 
-        [Description("Note the formula used is \"Damage [Multiplier ^ (Distance/DistanceDivider)]\"")]
+        [Description("Note the formula used is \"Damage * (Multiplier ^ (Distance/DistanceDivider))\". Remember, order of operations.")]
         public bool IsEnabled { get; set; } = true;
     }
 }
