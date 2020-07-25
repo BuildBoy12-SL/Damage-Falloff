@@ -34,11 +34,11 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\EndConditions-master\EndConditions\bin\Debug\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\..\AntiAntiCheat\AntiAntiCheat\bin\Release\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp_publicized, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\EndConditions-master\EndConditions\bin\Debug\Assembly-CSharp_publicized.dll</HintPath>
+      <HintPath>C:\Users\jwbra\Desktop\scopo\SCPSL_Data\Managed\publicized_assemblies\Assembly-CSharp_publicized.dll</HintPath>
     </Reference>
     <Reference Include="Mirror, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\..\References\Mirror.dll</HintPath>
